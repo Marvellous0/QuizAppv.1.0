@@ -1,0 +1,247 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: rgb(12, 124, 172);
+}
+
+.btn__start{
+    background: white;
+    color: rgb(12, 124, 172);
+    padding: 24px 30px;
+    border-radius: 6px;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14%;
+    margin: 40vh auto;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+
+.rules{
+    background: white;
+    color: rgb(12, 124, 172);
+    padding: 24px 30px;
+    border-radius: 6px;
+    width: 40%;
+    margin: 30vh auto;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.rules h2{
+    padding: 10px;
+}
+
+.rules ol{
+    padding: 20px;
+}
+
+.rules > ol > li{
+    padding: 6px;
+}
+
+.btns{
+    margin: 15px 0;
+    margin-left: 40%;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.btns > button{
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.exit__btn{
+    border: 2px solid rgb(12, 124, 172);
+    color: rgb(12, 124, 172);
+    background: white;
+    transition: .3s;
+}
+
+.exit__btn:hover{
+    color: white;
+    background: rgb(12, 124, 172);
+}
+.continue__btn{
+    border: 2px solid rgb(12, 124, 172);
+    color: white;
+    background: rgb(12, 124, 172);
+}
+
+.accept__username{
+    background: white;
+    color: rgb(12, 124, 172);
+    padding: 24px 30px;
+    border-radius: 6px;
+    width: 40%;
+    margin: 30vh auto;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.accept__username{
+    text-align: center;
+}
+
+.accept__username > input{
+    border: none;
+    border-bottom: 2px solid black;
+    width: 100%;
+    padding: 16px 0;
+    width: 80%;
+    margin: 10px auto;
+    display: block;
+}
+
+.accept__username > input:focus{
+    outline: none;
+}
+
+.accept__username > button{
+    border: 2px solid rgb(12, 124, 172);
+    color: white;
+    background: rgb(12, 124, 172);
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 70%;
+    margin: 10px auto;
+}
+
+.quiz_box{
+    background: white;
+    color: rgb(12, 124, 172);
+    padding: 24px 30px;
+    border-radius: 6px;
+    width: 40%;
+    margin: 20vh auto;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.quiz_box > .que_text{
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.quiz_box > .option_list{
+    padding: 10px 0px;
+}
+
+.disabled{
+    pointer-events: none;
+}
+
+.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.correct{
+    color: #155724;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.showResult{
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.quiz_box > h2{
+    text-align: center  ;
+    margin: 20px 0;
+}
+
+.quiz_box > .option_list > div{
+    padding: 20px;
+    color: white;
+    background: rgb(12, 124, 172);
+    margin: 10px 0;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.quiz_box > button{
+
+    border: 2px solid rgb(12, 124, 172);
+    color: white;
+    background: rgb(12, 124, 172);
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 10px;
+    width: 40%;
+    margin-left: 60%;
+}
+
+.result_box{
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    padding: 25px 30px;
+    width: 450px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.result_box .icon{
+    font-size: 100px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.result_box .complete_text{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.result_box .score_text span{
+    display: flex;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.result_box .score_text span p{
+    padding: 0 4px;
+    font-weight: 600;
+}
+
+.result_box .buttons{
+    display: flex;
+    margin: 20px 0;
+}
+
+.result_box .buttons button{
+    margin: 0 10px;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    transition: all 0.3s ease;
+}
